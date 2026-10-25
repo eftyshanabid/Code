@@ -11,14 +11,19 @@ def main():
     elif Electricity_Consumption <= 100 :
         total_bill = total_bill*unit_price_T1
     elif Electricity_Consumption >= 100 and Electricity_Consumption <= 200:
-        for i in range(0,100) :
-            total_bill = total_bill + unit_price_T1
+        total_bill = 500
         remainder = Electricity_Consumption - 100
-        print(remainder)
         for i in range(0,remainder) :
             total_bill = total_bill + unit_price_T2
+    else:
+        total_bill = 1200
+        remainder = Electricity_Consumption - 200
+        for i in range (0,remainder):
+            total_bill = total_bill + unit_price_T3
+                
 
-    print(total_bill)
+    if not Electricity_Consumption < 0 :
+        print(total_bill)
 
 
 main()
