@@ -1,6 +1,7 @@
 def main():
     scores = [2, 0, 3, 1, 0, 4, 2, 1, 0, 3]
     total_goals = 0
+    
 
     for score in scores:
         total_goals = total_goals + score
@@ -20,9 +21,9 @@ def main():
 
     print(f"Highest {highest_num_of_goals} goals scored in a single match")
 
+    for score in scores:
+        count = count + 1
+
+    print(f"Total {count} matches played")
+
     
-
-
-
-
-
