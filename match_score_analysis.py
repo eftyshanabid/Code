@@ -7,5 +7,11 @@ def main():
 
     print(f"total {total_goals} scored accross all the matches")
 
+    for score in scores:
+        if score == 0:
+            count = count + 1
+
+    print(f"Team failed to score in total {count} matches")
+
     
 
