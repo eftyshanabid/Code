@@ -13,5 +13,16 @@ def main():
 
     print(f"Team failed to score in total {count} matches")
 
+    for score in scores:
+        highest_num_of_goals = scores[0]
+        if highest_num_of_goals > score :
+            highest_num_of_goals = score
+
+    print(f"Highest {highest_num_of_goals} goals scored in a single match")
+
     
+
+
+
+
 
