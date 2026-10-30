@@ -8,25 +8,17 @@ def main():
 
     for score in scores:
         total_goals = total_goals + score
-
-    print(f"total {total_goals} scored accross all the matches")
-
-    for score in scores:
         if score == 0:
             count = count + 1
-
-    print(f"Team failed to score in total {count} matches")
-
-    for score in scores:
-        if highest_num_of_goals < score :
+        if highest_num_of_goals < score:
             highest_num_of_goals = score
 
-    print(f"Highest {highest_num_of_goals} goals scored in a single match")
-
-    for score in scores:
-        total_matches = total_matches+1
+    total_matches = len(scores)
     avg_score = total_goals/total_matches
 
+    print(f"total {total_goals} scored accross all the matches")      
+    print(f"Team failed to score in total {count} matches")
+    print(f"Highest {highest_num_of_goals} goals scored in a single match")
     print(f"Average {avg_score} goals scored")
 
     for index,score in enumerate(scores,start=1):
