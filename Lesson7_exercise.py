@@ -13,12 +13,23 @@ def unique_scores(scores):
 
 def most_frequent_score(scores):
      frequency = counting_scores(scores)
-     most_frequent_score = max(frequency.values())
-     return most_frequent_score
+     m_frequent_score = max(frequency.values())
+     return m_frequent_score
 
 def scoreless_match(scores):
      frequency = counting_scores(scores)
-     for     
+     for score,count in frequency.items():
+          if(score) == 0:
+               return count
+
+def handle_ties(scores):
+     frequency = counting_scores(scores)
+     most_frequent_score = max(frequency.values())
+     highest = {}
+     for score,count in frequency.items():
+          if count == most_frequent_score:
+               highest[score] = count
+     return highest
 
 def main():
 
@@ -27,5 +38,7 @@ def main():
     print(counting_scores(scores))
     print(unique_scores(scores))
     print(most_frequent_score(scores))
+    print(scoreless_match(scores))
+    print(handle_ties(scores))
 
 main()
